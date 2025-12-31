@@ -1,0 +1,11 @@
+resources:
+  - deployment.yml
+  - service.yml
+
+matchLabels:
+  app: node-app
+
+images:
+  - name: nodeapiv2
+    newTag: $GITHUB_SHA
+    
